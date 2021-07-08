@@ -23,7 +23,7 @@ class ClassListadoVM: ListadoVM
     var model: ListadoModelProtocol? {
         didSet {
             model?.getListCharacter({ (items) in
-                self.items = items
+                self.items = items.results
             })
         }
     }

@@ -24,6 +24,8 @@
 		414009C41EB71C8700DDC720 /* ListadoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414009C31EB71C8700DDC720 /* ListadoVM.swift */; };
 		414009C61EB71D4100DDC720 /* ClassListadoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414009C51EB71D4100DDC720 /* ClassListadoVM.swift */; };
 		414009C81EB7227D00DDC720 /* ListadoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414009C71EB7227D00DDC720 /* ListadoTVC.swift */; };
+		4158EE60269728D0002ED883 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4158EE5F269728D0002ED883 /* ServiceError.swift */; };
+		4158EE622697293D002ED883 /* AuxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4158EE612697293D002ED883 /* AuxService.swift */; };
 		415C0F2725ADA33B00CB4D3D /* StorageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 415C0F2525ADA33B00CB4D3D /* StorageModel.xcdatamodeld */; };
 		415C0F3325ADA92E00CB4D3D /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415C0F3225ADA92E00CB4D3D /* UNService.swift */; };
 		415C0F5125ADD4E900CB4D3D /* Validacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415C0F5025ADD4E900CB4D3D /* Validacion.swift */; };
@@ -87,6 +89,8 @@
 		414009C31EB71C8700DDC720 /* ListadoVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListadoVM.swift; sourceTree = "<group>"; };
 		414009C51EB71D4100DDC720 /* ClassListadoVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListadoVM.swift; sourceTree = "<group>"; };
 		414009C71EB7227D00DDC720 /* ListadoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListadoTVC.swift; sourceTree = "<group>"; };
+		4158EE5F269728D0002ED883 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		4158EE612697293D002ED883 /* AuxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuxService.swift; sourceTree = "<group>"; };
 		415C0F2625ADA33B00CB4D3D /* StorageModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StorageModel.xcdatamodel; sourceTree = "<group>"; };
 		415C0F3225ADA92E00CB4D3D /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 		415C0F5025ADD4E900CB4D3D /* Validacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validacion.swift; sourceTree = "<group>"; };
@@ -273,6 +277,15 @@
 			name = protocolos;
 			sourceTree = "<group>";
 		};
+		4158EE5E269728A1002ED883 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4158EE612697293D002ED883 /* AuxService.swift */,
+				4158EE5F269728D0002ED883 /* ServiceError.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		415C0F2425ADA30400CB4D3D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +381,7 @@
 		41D3E7B81ECEC95400AD31B8 /* servicios */ = {
 			isa = PBXGroup;
 			children = (
+				4158EE5E269728A1002ED883 /* Service */,
 				414009781EB26C6800DDC720 /* ApiService.swift */,
 			);
 			name = servicios;
@@ -560,6 +574,7 @@
 				4184790D1ECC0A9D00E2A158 /* ClassDetalleModel.swift in Sources */,
 				418479121ECC0EB000E2A158 /* ClassDetalleVM.swift in Sources */,
 				414009C41EB71C8700DDC720 /* ListadoVM.swift in Sources */,
+				4158EE622697293D002ED883 /* AuxService.swift in Sources */,
 				414009901EB6645800DDC720 /* Listado.swift in Sources */,
 				418479141ECC38A800E2A158 /* Detalle.swift in Sources */,
 				415C0F2725ADA33B00CB4D3D /* StorageModel.xcdatamodeld in Sources */,
@@ -572,6 +587,7 @@
 				4140098E1EB663BC00DDC720 /* AppCoordinador.swift in Sources */,
 				418479101ECC0D4D00E2A158 /* DetalleVM.swift in Sources */,
 				414008F91EAFD61300DDC720 /* AppDelegate.swift in Sources */,
+				4158EE60269728D0002ED883 /* ServiceError.swift in Sources */,
 				414009AA1EB71A0000DDC720 /* StructItem.swift in Sources */,
 				4184790B1ECC07BF00E2A158 /* DetalleModel.swift in Sources */,
 				414009C61EB71D4100DDC720 /* ClassListadoVM.swift in Sources */,

@@ -10,5 +10,5 @@ import Foundation
 
 protocol ListadoModelProtocol
 {
-    func getListCharacter(_ completionHandler: @escaping (_ items: [ProtocolItem]) -> Void)
+    func getListCharacter(_ completionHandler: @escaping (_ items: ApiServiceResults) -> Void)
 }

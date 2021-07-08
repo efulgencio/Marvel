@@ -13,12 +13,17 @@ class ClassListadoModel: ListadoModelProtocol
     
     fileprivate var items = [ProtocolItem]()
     
-    init() {}
+    init(){}
     
-    func getListCharacter(_ completionHandler: @escaping (_ items: [ProtocolItem]) -> Void)
+    func getListCharacter(_ completionHandler: @escaping (_ items: ApiServiceResults) -> Void)
     {
-        ApiService.getListCharacter { (result, error) in
-            completionHandler(result!)
+        ApiService.getListCharacter { result in
+            switch result {
+                case .failure(let error):
+                    debugPrint(error.localizedDescription)
+                case .success(let results):
+                    completionHandler(results)
+                }
         }
     }
 

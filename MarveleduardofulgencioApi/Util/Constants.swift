@@ -9,14 +9,6 @@
 
 let URL_BASE = "https://gateway.marvel.com:443/v1/public/"
 
-enum Constants: String {
-    case publicKey = "46996a2c4fafc17be9ee1914774decd5"
-}
-
-enum ApiCharacter: String {
-    case urlList = "%@characters?ts=1&apikey=%@&hash=2e6171c282cbca87032d394cf4c64f90"
-    case urlDetall = "%@characters/%@?ts=1&apikey=%@&hash=2e6171c282cbca87032d394cf4c64f90"
-}
 
 // MARK: - Path json
 
@@ -37,4 +29,5 @@ enum ErrorImageNotExist : String {
 enum TypeConstants: String {
     case OkResponse = "OK"
     case NoError = ""
+    case emptyData = "No content."
 }
