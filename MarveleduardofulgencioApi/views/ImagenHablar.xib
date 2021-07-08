@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImagenHablar" customModule="MarveleduardofulgencioApi" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="GyR-tV-Va3" id="12n-4Y-FCR"/>
+                <outlet property="imagenView" destination="jLv-nm-Whj" id="eOi-xH-Q9P"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wfL-O8-C5g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyR-tV-Va3">
+                    <rect key="frame" x="0.0" y="116" width="150" height="24"/>
+                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="c7z-ZX-thI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <state key="normal" title="Pulsa hablo de mi"/>
+                    <connections>
+                        <action selector="hablarMensaje:" destination="-1" eventType="touchUpInside" id="Dv9-gE-ClK"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgpersonaje1" translatesAutoresizingMaskIntoConstraints="NO" id="jLv-nm-Whj">
+                    <rect key="frame" x="5" y="0.0" width="140" height="110"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jLv-nm-Whj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="43c-oy-qWw"/>
+                <constraint firstItem="GyR-tV-Va3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bRB-f2-uIo"/>
+                <constraint firstAttribute="trailing" secondItem="GyR-tV-Va3" secondAttribute="trailing" id="gCU-Y8-W8e"/>
+                <constraint firstItem="jLv-nm-Whj" firstAttribute="centerX" secondItem="GyR-tV-Va3" secondAttribute="centerX" id="obh-YU-m16"/>
+                <constraint firstItem="jLv-nm-Whj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="t06-QH-LwY"/>
+                <constraint firstAttribute="bottom" secondItem="GyR-tV-Va3" secondAttribute="bottom" id="vRC-DQ-9td"/>
+                <constraint firstItem="GyR-tV-Va3" firstAttribute="top" secondItem="jLv-nm-Whj" secondAttribute="bottom" constant="6" id="xCX-Rj-8mL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-87" y="-211"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imgpersonaje1" width="425" height="425"/>
+    </resources>
+</document>

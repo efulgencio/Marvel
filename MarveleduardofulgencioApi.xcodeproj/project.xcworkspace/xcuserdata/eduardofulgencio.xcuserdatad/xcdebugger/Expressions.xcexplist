@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "specialized closure #1 in static ApiService.getListCharacter(completion:):ApiService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(elementos as! NSDictionary)[&quot;thumbnail&quot;]!">
+            </PersistentString>
+            <PersistentString
+               value = "(elementos as! NSDictionary)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ClassListadoVM.items.didset:ClassListadoVM.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ListadoTVC.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:ListadoTVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ListadoTVC.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:ListadoTVC.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
