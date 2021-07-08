@@ -71,6 +71,16 @@ extension ApiService {
         else {
             return .failure(ServiceError.jsonFailure(motive: "Error convert data to JSON"))
         }
+         
+        // TODO: decode json data ( now InfoResponse for status )
+        do {
+            if let infoResponse = try JSONDecoder().decode(InfoResponse.self, from: data) as InfoResponse? {
+                if infoResponse.status.uppercased() == TypeConstants.OkResponse.rawValue {}
+            }
+        } catch {
+            //
+        }
+    
         
         for contentElements in results where contentElements.key == "data" {
             if let characters  = contentElements.value["results"] as! NSArray? {
@@ -84,38 +94,3 @@ extension ApiService {
         
     }
 }
-
-
-/*
- 
- //  puede que estas dos líneas no hagan falta ????????
- //  urlRequest.httpMethod = "GET"
- //  urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
- 
- 
- do {
-      if let jsonArray = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: AnyObject] {
-          if let infoResponse = try JSONDecoder().decode(InfoResponse.self, from: responseData) as InfoResponse? {
-              if infoResponse.status.uppercased() == TypeConstants.OkResponse.rawValue {
-                  
-                   for contentElements in jsonArray where contentElements.key == "data" {
-                       if let characters  = contentElements.value["results"] as! NSArray? {
-                           for characterDict in characters {
-                               protocolItems.append(StructItem(character: characterDict as! NSDictionary))
-                           }
-                       }
-                   }
-                  
-                   completion(protocolItems, ErrorService.NoError(description: TypeConstants.NoError.rawValue ))
-              } else {
-                  completion(protocolItems, ErrorService.NoError(description: TypeConstants.NoError.rawValue ))
-              }
-          }
-      } else {
-          completion(protocolItems, ErrorService.NoError(description: TypeConstants.NoError.rawValue ))
-      }
- } catch  {
-     return
- }
- 
- */
