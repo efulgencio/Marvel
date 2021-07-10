@@ -19,4 +19,9 @@ Evolutivo de la prueba cronológico:
 - Implementada 
 - ArKit (Realidad Aumentada)
 - Generic (ViewBase) implementa método según el View del que proviene
+		extension ViewBase where T: UIButton {
+		    func changeTitle(to title: String) {
+		        view.setTitle(title, for: .normal)
+		    }
+		}
 
