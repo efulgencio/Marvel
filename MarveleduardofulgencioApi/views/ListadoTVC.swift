@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
  class ListadoTVC: UITableViewController {
     
-    var filteredResults: [StructItem] = [StructItem]()
+    var filteredResults: [StructItem] = [StructItem]() {
+        didSet {
+            reloadTableView()
+        }
+    }
     var initialResults: [StructItem] = [StructItem]()
 
     let tableRefreshControl = UIRefreshControl()
     var resultsController = UITableViewController()
     let searchController = UISearchController(searchResultsController: nil)
+    
 
     var isLoaded: Bool = false
     
@@ -97,9 +104,7 @@ import UIKit
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         filteredResults = initialResults
-        reloadTableView()
     }
-    
     
     func filterValues(searchBar: UISearchBar) {
         
@@ -109,21 +114,11 @@ import UIKit
         if searchQuery.isEmpty {
             tableRefreshControl.endRefreshing()
             filteredResults = initialResults
-            reloadTableView()
-            
             return
         }
 
-        // Empty before result
-        filteredResults.removeAll()
+        filteredResults = initialResults.filter({ $0.nombre.lowercased().contains(searchQuery.lowercased()) })
 
-        for i in 0..<initialResults.count {
-            if initialResults[i].nombre.lowercased().contains(searchQuery.lowercased()) {
-                filteredResults.append(initialResults[i])
-            }
-        }
-
-        reloadTableView()
     }
     
     private func reloadTableView() {

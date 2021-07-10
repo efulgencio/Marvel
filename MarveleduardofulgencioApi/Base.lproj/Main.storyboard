@@ -118,6 +118,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="iML-1J-ySH" id="6cV-aQ-Pov"/>
+                        <outlet property="btnArkit" destination="KeN-cb-CCq" id="l7S-Wb-3u6"/>
                         <outlet property="btnBack" destination="TM7-pf-iQK" id="fca-w2-T5l"/>
                         <outlet property="imagenView" destination="DTz-YF-gmB" id="dQx-fw-FaL"/>
                         <outlet property="lblitem" destination="N5U-pg-hh4" id="Hj4-xC-U1A"/>

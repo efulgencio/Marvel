@@ -14,6 +14,8 @@ class DetalleVC: UIViewController {
     @IBOutlet var imagenView: UIImageView!
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var btnBack: UIButton!
+    @IBOutlet var btnArkit: UIButton!
+    
     
     var blurEffectView: UIVisualEffectView?
 
@@ -32,7 +34,7 @@ class DetalleVC: UIViewController {
        do  {
          return try  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.fetch(Character.fetchRequest())
        } catch {
-         print("error pendiente de gestionar")
+            print("error pendiente de gestionar")
        }
        return [Character]()
     }
