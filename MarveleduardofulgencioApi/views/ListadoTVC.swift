@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AVFoundation
 
  class ListadoTVC: UITableViewController {
     
@@ -57,6 +58,14 @@ import RxCocoa
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+        let utterance = AVSpeechUtterance(string: "hola")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.rate = 0.1
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+        
+        
         guard let dispose = disposeBag else {
             return
         }
@@ -65,7 +74,17 @@ import RxCocoa
             .asObservable()
             .subscribe(
                 onNext: { [unowned self] value in
-                    self.showAlert(message: "Ya puedes")
+                    self.showAlert(message:
+                        """
+                        Puedes realizar búsquedas.
+                        Si pulsas sobre el personaje te dice un texto.
+                        El personaje seleccionada se almacena en core data.
+                        Si accedes a los detalles y pulsas sobre Arkit
+                        se activa la cámara se muestran tres personajes
+                        selecciona uno y selecciona en la pantalla
+                        para verlo, desplaza el móvil para encontrarlor.
+                        """
+                    )
               }
             )
             .disposed(by: dispose)

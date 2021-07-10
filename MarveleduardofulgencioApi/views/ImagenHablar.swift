@@ -56,16 +56,17 @@ class ImagenHablar: UIView {
     }
     
     
+    // FIXME: - Don't speak
+    
     /// Use AVSpeechSynthesizer for say text
     /// - Parameter textoIn: Text to say
     private func hablar(textoIn: String) {
-        
-        let speechsynt: AVSpeechSynthesizer = AVSpeechSynthesizer()
-        let nextSpeech:AVSpeechUtterance = AVSpeechUtterance(string: textoIn)
-        nextSpeech.rate = AVSpeechUtteranceDefaultSpeechRate
-        
-        speechsynt.speak(nextSpeech)
-        
+//        let speechsynt: AVSpeechSynthesizer = AVSpeechSynthesizer()
+//        let nextSpeech:AVSpeechUtterance = AVSpeechUtterance(string: textoIn)
+//        nextSpeech.voice = AVSpeechSynthesisVoice(identifier: "com.apple.speech.synthesis.voice.samantha.premium")
+//        nextSpeech.rate = 0.5 // AVSpeechUtteranceDefaultSpeechRate
+//
     }
 
 }
+

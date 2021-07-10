@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,9 +19,9 @@
             <rect key="frame" x="0.0" y="0.0" width="150" height="140"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyR-tV-Va3">
-                    <rect key="frame" x="0.0" y="116" width="150" height="24"/>
-                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyR-tV-Va3">
+                    <rect key="frame" x="0.0" y="116" width="145" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="c7z-ZX-thI"/>
                     </constraints>
@@ -32,21 +32,18 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgpersonaje1" translatesAutoresizingMaskIntoConstraints="NO" id="jLv-nm-Whj">
-                    <rect key="frame" x="5" y="0.0" width="140" height="110"/>
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="140"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="jLv-nm-Whj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="43c-oy-qWw"/>
-                <constraint firstItem="GyR-tV-Va3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bRB-f2-uIo"/>
-                <constraint firstAttribute="trailing" secondItem="GyR-tV-Va3" secondAttribute="trailing" id="gCU-Y8-W8e"/>
-                <constraint firstItem="jLv-nm-Whj" firstAttribute="centerX" secondItem="GyR-tV-Va3" secondAttribute="centerX" id="obh-YU-m16"/>
-                <constraint firstItem="jLv-nm-Whj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="t06-QH-LwY"/>
-                <constraint firstAttribute="bottom" secondItem="GyR-tV-Va3" secondAttribute="bottom" id="vRC-DQ-9td"/>
-                <constraint firstItem="GyR-tV-Va3" firstAttribute="top" secondItem="jLv-nm-Whj" secondAttribute="bottom" constant="6" id="xCX-Rj-8mL"/>
+                <constraint firstItem="jLv-nm-Whj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5bx-Zb-HkF"/>
+                <constraint firstAttribute="trailing" secondItem="jLv-nm-Whj" secondAttribute="trailing" id="F2y-LG-uFA"/>
+                <constraint firstItem="jLv-nm-Whj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PPH-Js-vwB"/>
+                <constraint firstAttribute="bottom" secondItem="jLv-nm-Whj" secondAttribute="bottom" id="s01-Dw-T2Z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-87" y="-211"/>
+            <point key="canvasLocation" x="-88" y="-211.39430284857573"/>
         </view>
     </objects>
     <resources>
