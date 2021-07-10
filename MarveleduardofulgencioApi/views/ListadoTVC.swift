@@ -67,11 +67,15 @@ import UIKit
         tableView.separatorStyle = .none
     }
     
+    
+    /// Creating search bar
     private func creatingSearhBarInHeaderView() {
         tableView.tableHeaderView = self.searchController.searchBar
         searchController.searchBar.delegate = self
      }
     
+    
+    /// Fill Initial Result
     private func fillInitialResult() {
         initialResults.removeAll()
         for i in 0..<viewModel!.numberOfItems {
@@ -93,34 +97,36 @@ import UIKit
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         filteredResults = initialResults
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        reloadTableView()
     }
     
     
     func filterValues(searchBar: UISearchBar) {
-        guard var searchQuery = searchController.searchBar.text else { return }
+        
+        guard let searchQuery = searchController.searchBar.text else { return }
         tableRefreshControl.beginRefreshing()
 
-        if searchQuery == "" {
-          tableRefreshControl.endRefreshing()
-          filteredResults = initialResults
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-          return
+        if searchQuery.isEmpty {
+            tableRefreshControl.endRefreshing()
+            filteredResults = initialResults
+            reloadTableView()
+            
+            return
         }
 
-        searchQuery = searchQuery.lowercased()
+        // Empty before result
         filteredResults.removeAll()
 
         for i in 0..<initialResults.count {
-            if initialResults[i].nombre.lowercased().contains(searchQuery) {
+            if initialResults[i].nombre.lowercased().contains(searchQuery.lowercased()) {
                 filteredResults.append(initialResults[i])
             }
         }
 
+        reloadTableView()
+    }
+    
+    private func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -174,13 +180,13 @@ extension ListadoTVC
     }
 }
 
+ // MARK: - ListadoVMViewDelegate
+ 
 extension ListadoTVC: ListadoVMViewDelegate
 {
     func valoresDidChange(viewModel: ListadoVM)
     {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        reloadTableView()
     }
 }
 

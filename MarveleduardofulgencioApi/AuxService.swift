@@ -9,6 +9,7 @@
 import Foundation
 
 enum ApiCharacter: String {
+    case URL_BASE = "https://gateway.marvel.com:443/v1/public/"
     case urlList = "%@characters?ts=1&apikey=%@&hash=2e6171c282cbca87032d394cf4c64f90"
     case urlDetall = "%@characters/%@?ts=1&apikey=%@&hash=2e6171c282cbca87032d394cf4c64f90"
 }

@@ -1,5 +1,5 @@
 //
-//  DetailModel.swift
+//  ClassDetalleModel.swift
 //  MarveleduardofulgencioApi
 //
 //  Created by eduardo fulgencio on 8/01/2021.
@@ -8,7 +8,21 @@
 
 import Foundation
 
-protocol DetalleModel
+class DetalleModel: DetalleModelProtocol
 {
+    
+    fileprivate var item: ProtocolItem?
+    
+    init(detailItem: ProtocolItem)
+    {
+        self.item = detailItem
+    }
+    
     func detalle(_ completionHandler: @escaping (_ item: ProtocolItem?) -> Void)
+    {
+        DispatchQueue.global().async {
+            completionHandler(self.item)
+        }
+    }
+    
 }

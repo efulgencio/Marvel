@@ -7,9 +7,6 @@
 //
 
 
-let URL_BASE = "https://gateway.marvel.com:443/v1/public/"
-
-
 // MARK: - Path json
 
 enum PathJson: String {

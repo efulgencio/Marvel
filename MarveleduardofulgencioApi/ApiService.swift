@@ -45,7 +45,7 @@ extension ApiService {
     /// - Parameter urlApi : end point request
     /// - Returns: url
     private static func generateUrl(_ urlApi: String) -> URL? {
-        let URLString = String(format: urlApi, URL_BASE, publicKey)
+        let URLString = String(format: urlApi, ApiCharacter.URL_BASE.rawValue, publicKey)
         return URL(string: URLString)
     }
     
@@ -80,7 +80,6 @@ extension ApiService {
         } catch {
             //
         }
-    
         
         for contentElements in results where contentElements.key == "data" {
             if let characters  = contentElements.value["results"] as! NSArray? {

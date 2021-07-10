@@ -34,8 +34,8 @@ class Listado: Coordinador
         
         guard let listViewController = listViewController else { return }
         
-        let viewModel =  ClassListadoVM()
-        viewModel.model = ClassListadoModel()
+        let viewModel =  ListadoVM()
+        viewModel.model = ListadoModel()
         viewModel.coordinatorDelegate = self
         listViewController.viewModel = viewModel
         window.rootViewController = listViewController

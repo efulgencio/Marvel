@@ -1,5 +1,5 @@
 //
-//  DetalleVM.swift
+//  ClassDetalleVM.swift
 //  MarveleduardofulgencioApi
 //
 //  Created by eduardo fulgencio on 8/01/2021.
@@ -8,22 +8,27 @@
 
 import Foundation
 
-protocol DetalleVMViewDelegate: AnyObject
+class DetalleVM: ProtocolDetalleVM
 {
-    func valorDidChange(viewModel: DetalleVM)
-}
-
-
-protocol DetalleVMCoordinadorDelegate: AnyObject
-{
-    func detalleViewModelDidEnd(_ viewModel: DetalleVM)
-}
-
-protocol DetalleVM
-{
-    var model: DetalleModel? { get set }
-    var viewDelegate: DetalleVMViewDelegate? { get set }
-    var coordinadorDelegate: DetalleVMCoordinadorDelegate? { get set}
-    var detail: ProtocolItem? { get }
-    func done()
+    weak var viewDelegate: DetalleVMViewDelegate?
+    weak var coordinadorDelegate: DetalleVMCoordinadorDelegate?
+    
+    fileprivate(set) var detail: ProtocolItem? {
+        didSet {
+            viewDelegate?.valorDidChange(viewModel: self)
+        }
+    }
+    
+    var model: DetalleModel? {
+        didSet {
+            model?.detalle({ (item) in
+                self.detail = item
+            })
+        }
+    }
+    
+    func done() {
+        coordinadorDelegate?.detalleViewModelDidEnd(self)
+    }
+    
 }

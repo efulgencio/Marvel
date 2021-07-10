@@ -49,6 +49,8 @@ class DetalleVC: UIViewController {
         }
     }
     
+    // MARK: - Circle life app
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         saveCoreData()
@@ -72,9 +74,21 @@ class DetalleVC: UIViewController {
         animationImgCharacter()
     }
     
-    // Si no hay una imagen relacionada
+    // FIXME: - Fix
     
-    fileprivate func checkErrorImage() {
+    private func actualizarView()
+    {
+        if let viewModel = viewModel {
+            //lblitem?.text = viewModel.detail?.name
+            print(viewModel.detail?.nombre ?? "nada")
+        } else {
+            lblitem.text = ""
+        }
+    }
+    
+    // MARK: - Private functions
+    
+    private func checkErrorImage() {
         let validation = Validation()
         
         do {
@@ -83,16 +97,6 @@ class DetalleVC: UIViewController {
             UNService.shared.queueRequest(title: "Imagen", subTitle: "No hay imagen del personaje.")
             return
         } catch {}
-    }
-    
-    fileprivate func actualizarView()
-    {
-        if let viewModel = viewModel {
-            //lblitem?.text = viewModel.detail?.name
-            print(viewModel.detail?.nombre ?? "nada")
-        } else {
-            lblitem.text = ""
-        }
     }
     
     private func notInCoreData() -> Bool{
@@ -119,7 +123,7 @@ class DetalleVC: UIViewController {
     }
 
     
-    // MARK: - PRIVATE METHOD
+    // MARK: - Save core data
 
     private func saveCoreData() {
         
@@ -128,7 +132,7 @@ class DetalleVC: UIViewController {
             let caracter = Character(context: context)
             caracter.name = viewModel?.detail?.nombre
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
+        
             UNService.shared.queueRequest(title: "Favorito", subTitle: "Este personaje se ha guardado en favoritos.")
         } else {
             UNService.shared.queueRequest(title: "Favorito", subTitle: "Este personaje ya está en favoritos.")
@@ -139,12 +143,15 @@ class DetalleVC: UIViewController {
     
 }
 
+// MARK: - CAAnimationDelegate
+
 extension DetalleVC: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         applyBlur()
      }
 }
 
+// MARK: - DetalleVMViewDelegate
 
 extension DetalleVC: DetalleVMViewDelegate
 {

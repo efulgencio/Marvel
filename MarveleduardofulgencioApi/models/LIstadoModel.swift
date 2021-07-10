@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ClassListadoModel: ListadoModelProtocol
+class ListadoModel: ListadoModelProtocol
 {
     
     fileprivate var items = [ProtocolItem]()

@@ -31,8 +31,8 @@ class Detalle: Coordinador
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if let vc = storyboard.instantiateViewController(withIdentifier: "Detalle") as? DetalleVC {
-            let viewModel =  ClassDetalleVM()
-            viewModel.model = ClassDetalleModel(detailItem: dataItem)
+            let viewModel = DetalleVM()
+            viewModel.model = DetalleModel(detailItem: dataItem)
             viewModel.coordinadorDelegate = self
             vc.viewModel = viewModel
             window.rootViewController = vc

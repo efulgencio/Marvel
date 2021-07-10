@@ -1,5 +1,5 @@
 //
-//  ListadoVM.swift
+//  ClassListadoVM.swift
 //  MarveleduardofulgencioApi
 //
 //  Created by Eduardo Fulgencio on 1/5/17.
@@ -8,26 +8,49 @@
 
 import Foundation
 
-
-protocol ListadoVMViewDelegate: AnyObject
+class ListadoVM: ProtocolListadoVM
 {
-    func valoresDidChange(viewModel: ListadoVM)
-}
-
-protocol ListadoVMCoordinatorDelegate: AnyObject
-{
-    func listadoVMDidSelectData(_ viewModel: ListadoVM, data: ProtocolItem)
-}
-
-protocol ListadoVM
-{
-    var model: ListadoModelProtocol? { get set }
-    var viewDelegate: ListadoVMViewDelegate? { get set }
-    var coordinatorDelegate: ListadoVMCoordinatorDelegate? { get set}
     
-    var title: String { get }
+    weak var viewDelegate: ListadoVMViewDelegate?
+    weak var coordinatorDelegate: ListadoVMCoordinatorDelegate?
     
-    var numberOfItems: Int { get }
+    fileprivate var items: [ProtocolItem]? {
+        didSet {
+            viewDelegate?.valoresDidChange(viewModel: self)
+        }
+    }
+
+    var model: ListadoModelProtocol? {
+        didSet {
+            model?.getListCharacter({ (items) in
+                self.items = items.results
+            })
+        }
+    }
+    
+    var title: String {
+        return "List"
+    }
+    
+    var numberOfItems: Int {
+        if let items = items {
+            return items.count
+        }
+        return 0
+    }
+    
     func itemAtIndex(_ index: Int) -> ProtocolItem?
+    {
+        if let items = items , items.count > index {
+            return items[index]
+        }
+        return nil
+    }
+    
     func useItemAtIndex(_ index: Int)
+    {
+        if let items = items, let coordinatorDelegate = coordinatorDelegate  , index < items.count {
+            coordinatorDelegate.listadoVMDidSelectData(self, data: items[index])
+        }
+    }
 }
