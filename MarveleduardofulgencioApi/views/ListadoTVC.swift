@@ -12,6 +12,8 @@ import RxCocoa
 
  class ListadoTVC: UITableViewController {
     
+    var disposeBag: DisposeBag?
+    
     var filteredResults: [StructItem] = [StructItem]() {
         didSet {
             reloadTableView()
@@ -22,9 +24,6 @@ import RxCocoa
     let tableRefreshControl = UIRefreshControl()
     var resultsController = UITableViewController()
     let searchController = UISearchController(searchResultsController: nil)
-    
-
-    var isLoaded: Bool = false
     
     var viewModel: ListadoVM? {
         didSet {
@@ -50,8 +49,26 @@ import RxCocoa
         
         creatingSearhBarInHeaderView()
 
-        isLoaded = true
         refreshDisplay();
+        disposeBag = DisposeBag()
+
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        guard let dispose = disposeBag else {
+            return
+        }
+        viewModel?
+            .isLoad
+            .asObservable()
+            .subscribe(
+                onNext: { [unowned self] value in
+                    self.showAlert(message: "Ya puedes")
+              }
+            )
+            .disposed(by: dispose)
     }
     
     
@@ -59,7 +76,7 @@ import RxCocoa
     
     private func refreshDisplay()
     {
-        if let viewModel = viewModel , isLoaded {
+        if let viewModel = viewModel {
             title = viewModel.title
         } else {
             title = ""
@@ -160,6 +177,7 @@ extension ListadoTVC
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+      disposeBag = nil
       viewModel?.useItemAtIndex((indexPath as NSIndexPath).row)
     }
     

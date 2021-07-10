@@ -7,12 +7,19 @@
 //
 
 import Foundation
+import RxSwift
+import RxRelay
 
 class ListadoVM: ProtocolListadoVM
 {
     
     weak var viewDelegate: ListadoVMViewDelegate?
     weak var coordinatorDelegate: ListadoVMCoordinatorDelegate?
+    var isLoad: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    
+    init() {
+        isLoad = BehaviorRelay(value: false)
+    }
     
     fileprivate var items: [ProtocolItem]? {
         didSet {
@@ -25,6 +32,7 @@ class ListadoVM: ProtocolListadoVM
             model?.getListCharacter({ (items) in
                 self.items = items.results
             })
+            isLoad = BehaviorRelay(value: false)
         }
     }
     
