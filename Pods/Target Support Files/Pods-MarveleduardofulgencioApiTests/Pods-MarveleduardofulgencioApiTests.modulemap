@@ -1,0 +1,6 @@
+framework module Pods_MarveleduardofulgencioApiTests {
+  umbrella header "Pods-MarveleduardofulgencioApiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

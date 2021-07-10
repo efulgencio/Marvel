@@ -36,10 +36,6 @@ class DetalleVC: UIViewController {
        return [Character]()
     }
     
-    @IBAction func volve(_ sender: Any) {
-           viewModel?.done();
-    }
-    
     var viewModel: DetalleVM? {
         willSet {
             viewModel?.viewDelegate = nil
@@ -59,6 +55,7 @@ class DetalleVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         backgroundImage.image = UIImage(named: "imgpersonaje1" ) // pending default image
         if let viewModel = viewModel {
             lblitem.text = viewModel.detail?.nombre
@@ -72,6 +69,13 @@ class DetalleVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         animationImgCharacter()
+    }
+    
+    
+    // MARK: - IBAction
+    
+    @IBAction func volve(_ sender: Any) {
+           viewModel?.done();
     }
     
     // FIXME: - Fix
@@ -109,7 +113,6 @@ class DetalleVC: UIViewController {
         
         return isNotInCoreData
     }
-    
     
     private func applyBlur() {
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)

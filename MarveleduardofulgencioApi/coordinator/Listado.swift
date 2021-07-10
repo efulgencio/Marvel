@@ -42,6 +42,7 @@ class Listado: Coordinador
     }
 }
 
+// MARK: - ListadoVMCoordinatorDelegate
 
 extension Listado: ListadoVMCoordinatorDelegate
 {
@@ -53,6 +54,7 @@ extension Listado: ListadoVMCoordinatorDelegate
     }
 }
 
+// MARK: - DetalleCoordinatorDelegate
 
 extension Listado: DetalleCoordinatorDelegate
 {

@@ -26,6 +26,7 @@ class AppCoordinador: Coordinador
     }
 }
 
+// MARK: - ListadoDelegate
 
 extension AppCoordinador: ListadoDelegate
 {
@@ -36,6 +37,8 @@ extension AppCoordinador: ListadoDelegate
         listado.delegate = self
         listado.inicializar()
     }
+    
+    // TODO - pending 
     
     func listadoDidFinish(listCoordinador listCoordinator: Listado)
     {

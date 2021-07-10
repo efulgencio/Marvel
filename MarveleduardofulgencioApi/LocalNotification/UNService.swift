@@ -58,6 +58,8 @@ class UNService: NSObject {
     
 }
 
+// MARK: - UNUserNotificationCenterDelegate
+
 extension UNService: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {

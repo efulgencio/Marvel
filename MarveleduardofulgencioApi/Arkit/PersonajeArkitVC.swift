@@ -94,10 +94,13 @@ class PersonajeArkitVC: UIViewController {
         let hitTransform = SCNMatrix4(hitFeature.worldTransform)
         let hitPosition = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
         placeHero(position: hitPosition)
+        
     }
 
 }
 
+
+// MARK: - PersonajeArkitVC
 
 extension PersonajeArkitVC {
     
@@ -121,7 +124,7 @@ extension PersonajeArkitVC {
         focusView.center = focusPoint
         sceneView.addSubview(focusView)
         
-        sceneView.delegate = self
+      //   sceneView.delegate = self
     }
 
     func onHeroSelected(selectedHeroName: HeroName) {
@@ -130,6 +133,8 @@ extension PersonajeArkitVC {
     }
     
 }
+
+// MARK: - UIPopoverPresentationControllerDelegate
 
 extension PersonajeArkitVC: UIPopoverPresentationControllerDelegate {
     
@@ -143,28 +148,28 @@ extension PersonajeArkitVC: UIPopoverPresentationControllerDelegate {
     }
     
 }
-
-//MARK: ARSCNViewDelegate
-extension PersonajeArkitVC : ARSCNViewDelegate {
-    
-    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        
-//        DispatchQueue.main.async { [weak self] in
 //
-//            guard let strongSelf = self else { return }
+////MARK: - ARSCNViewDelegate
+//extension PersonajeArkitVC : ARSCNViewDelegate {
 //
-//            if !strongSelf.inEditMode { return }
+//    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
 //
-//            for node in strongSelf.nodes {
-//
-//                let position = node.ringNode.convertPosition(SCNVector3Zero, to: nil)
-//                let projectedPoint = renderer.projectPoint(position)
-//                let projectedCGPoint = CGPoint(x: CGFloat(projectedPoint.x), y: CGFloat(projectedPoint.y))
-//                let distance = projectedCGPoint.distance(to: strongSelf.focusPoint)
-//                if distance < 50 {
-//                    strongSelf.onSelectNode(heroNode: node)
-//                }
-//            }
-//        }
-    }
-}
+////        DispatchQueue.main.async { [weak self] in
+////
+////            guard let strongSelf = self else { return }
+////
+////            if !strongSelf.inEditMode { return }
+////
+////            for node in strongSelf.nodes {
+////
+////                let position = node.ringNode.convertPosition(SCNVector3Zero, to: nil)
+////                let projectedPoint = renderer.projectPoint(position)
+////                let projectedCGPoint = CGPoint(x: CGFloat(projectedPoint.x), y: CGFloat(projectedPoint.y))
+////                let distance = projectedCGPoint.distance(to: strongSelf.focusPoint)
+////                if distance < 50 {
+////                    strongSelf.onSelectNode(heroNode: node)
+////                }
+////            }
+////        }
+//    }
+// }

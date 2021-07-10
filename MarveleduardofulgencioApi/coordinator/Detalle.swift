@@ -41,14 +41,14 @@ class Detalle: Coordinador
     }
 }
 
+// MARK: - DetalleVMCoordinadorDelegate
+
 extension Detalle: DetalleVMCoordinadorDelegate
 {
-    
     func detalleViewModelDidEnd(_ viewModel: DetalleVM)
     {
         delegate?.detalleCoordinatorDidFinish(detailCoordinator: self)
     }
-    
 }
  
  

@@ -20,6 +20,7 @@ class ListadoModel: ListadoModelProtocol
         ApiService.getListCharacter { result in
             switch result {
                 case .failure(let error):
+                    // TODO: Append alert with message
                     debugPrint(error.localizedDescription)
                 case .success(let results):
                     completionHandler(results)

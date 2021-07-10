@@ -46,6 +46,9 @@
 		418479161ECC3B2600E2A158 /* DetalleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418479151ECC3B2600E2A158 /* DetalleVC.swift */; };
 		419A4AEB25A8A13E00BD550D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A4AEA25A8A13D00BD550D /* Constants.swift */; };
 		419E7EE025AB3964001B36BC /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419E7EDF25AB3964001B36BC /* UIImageViewExtension.swift */; };
+		48CB830AD09F5AB70AEAF4D4 /* Pods_MarveleduardofulgencioApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CB4C3438BADC05352498A /* Pods_MarveleduardofulgencioApi.framework */; };
+		F1E647867D746BCAA13869E0 /* Pods_MarveleduardofulgencioApi_MarveleduardofulgencioApiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A8D728A974254FC2DCDA92 /* Pods_MarveleduardofulgencioApi_MarveleduardofulgencioApiUITests.framework */; };
+		F5FAC3F31FB817869ABE2D0A /* Pods_MarveleduardofulgencioApiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94FB88E83263845EEC43B76 /* Pods_MarveleduardofulgencioApiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A86873E07E982F8ABA5F914 /* Pods-MarveleduardofulgencioApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi.release.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi.release.xcconfig"; sourceTree = "<group>"; };
+		2FAEDFB21BFB2133AD3F55BA /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3ECBCF44149D8E8CB4775823 /* Pods-MarveleduardofulgencioApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi.debug.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi.debug.xcconfig"; sourceTree = "<group>"; };
 		414008F51EAFD61300DDC720 /* MarveleduardofulgencioApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarveleduardofulgencioApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414008F81EAFD61300DDC720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		414008FD1EAFD61300DDC720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +117,12 @@
 		418479151ECC3B2600E2A158 /* DetalleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleVC.swift; sourceTree = "<group>"; };
 		419A4AEA25A8A13D00BD550D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		419E7EDF25AB3964001B36BC /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		6085E09307FCDC21C42F2A8B /* Pods-MarveleduardofulgencioApiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApiTests.debug.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApiTests/Pods-MarveleduardofulgencioApiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87BBBC80B38EF0F39454D1C7 /* Pods-MarveleduardofulgencioApiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApiTests.release.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApiTests/Pods-MarveleduardofulgencioApiTests.release.xcconfig"; sourceTree = "<group>"; };
+		89883D859F424B6041FD1630 /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.release.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		922CB4C3438BADC05352498A /* Pods_MarveleduardofulgencioApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarveleduardofulgencioApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A8D728A974254FC2DCDA92 /* Pods_MarveleduardofulgencioApi_MarveleduardofulgencioApiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarveleduardofulgencioApi_MarveleduardofulgencioApiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94FB88E83263845EEC43B76 /* Pods_MarveleduardofulgencioApiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarveleduardofulgencioApiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CB830AD09F5AB70AEAF4D4 /* Pods_MarveleduardofulgencioApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5FAC3F31FB817869ABE2D0A /* Pods_MarveleduardofulgencioApiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E647867D746BCAA13869E0 /* Pods_MarveleduardofulgencioApi_MarveleduardofulgencioApiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +172,8 @@
 				4140090C1EAFD61300DDC720 /* MarveleduardofulgencioApiTests */,
 				414009171EAFD61300DDC720 /* MarveleduardofulgencioApiUITests */,
 				414008F61EAFD61300DDC720 /* Products */,
+				9640961F26DA98A338AB10FE /* Pods */,
+				7264DB512FD09B6AD3D87A50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -417,6 +434,30 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		7264DB512FD09B6AD3D87A50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				922CB4C3438BADC05352498A /* Pods_MarveleduardofulgencioApi.framework */,
+				D0A8D728A974254FC2DCDA92 /* Pods_MarveleduardofulgencioApi_MarveleduardofulgencioApiUITests.framework */,
+				D94FB88E83263845EEC43B76 /* Pods_MarveleduardofulgencioApiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9640961F26DA98A338AB10FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ECBCF44149D8E8CB4775823 /* Pods-MarveleduardofulgencioApi.debug.xcconfig */,
+				2A86873E07E982F8ABA5F914 /* Pods-MarveleduardofulgencioApi.release.xcconfig */,
+				2FAEDFB21BFB2133AD3F55BA /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig */,
+				89883D859F424B6041FD1630 /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.release.xcconfig */,
+				6085E09307FCDC21C42F2A8B /* Pods-MarveleduardofulgencioApiTests.debug.xcconfig */,
+				87BBBC80B38EF0F39454D1C7 /* Pods-MarveleduardofulgencioApiTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,9 +465,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4140091D1EAFD61300DDC720 /* Build configuration list for PBXNativeTarget "MarveleduardofulgencioApi" */;
 			buildPhases = (
+				80586EF06CF11F46FBC1127F /* [CP] Check Pods Manifest.lock */,
 				414008F11EAFD61300DDC720 /* Sources */,
 				414008F21EAFD61300DDC720 /* Frameworks */,
 				414008F31EAFD61300DDC720 /* Resources */,
+				B1A2ECC4237FDD455AB301D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -441,6 +484,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 414009201EAFD61300DDC720 /* Build configuration list for PBXNativeTarget "MarveleduardofulgencioApiTests" */;
 			buildPhases = (
+				6D16068DD7E621F722446AB7 /* [CP] Check Pods Manifest.lock */,
 				414009051EAFD61300DDC720 /* Sources */,
 				414009061EAFD61300DDC720 /* Frameworks */,
 				414009071EAFD61300DDC720 /* Resources */,
@@ -459,9 +503,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 414009231EAFD61300DDC720 /* Build configuration list for PBXNativeTarget "MarveleduardofulgencioApiUITests" */;
 			buildPhases = (
+				0B6E60D3F411F08B77831974 /* [CP] Check Pods Manifest.lock */,
 				414009101EAFD61300DDC720 /* Sources */,
 				414009111EAFD61300DDC720 /* Frameworks */,
 				414009121EAFD61300DDC720 /* Resources */,
+				10693C0A6DAC6D3BEF14A6B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -554,6 +600,119 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B6E60D3F411F08B77831974 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		10693C0A6DAC6D3BEF14A6B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D16068DD7E621F722446AB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarveleduardofulgencioApiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80586EF06CF11F46FBC1127F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarveleduardofulgencioApi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A2ECC4237FDD455AB301D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		414008F11EAFD61300DDC720 /* Sources */ = {
@@ -758,6 +917,7 @@
 		};
 		4140091E1EAFD61300DDC720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ECBCF44149D8E8CB4775823 /* Pods-MarveleduardofulgencioApi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -772,6 +932,7 @@
 		};
 		4140091F1EAFD61300DDC720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A86873E07E982F8ABA5F914 /* Pods-MarveleduardofulgencioApi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -786,6 +947,7 @@
 		};
 		414009211EAFD61300DDC720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6085E09307FCDC21C42F2A8B /* Pods-MarveleduardofulgencioApiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -801,6 +963,7 @@
 		};
 		414009221EAFD61300DDC720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87BBBC80B38EF0F39454D1C7 /* Pods-MarveleduardofulgencioApiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -816,6 +979,7 @@
 		};
 		414009241EAFD61300DDC720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FAEDFB21BFB2133AD3F55BA /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 66F3QGR86W;
@@ -830,6 +994,7 @@
 		};
 		414009251EAFD61300DDC720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89883D859F424B6041FD1630 /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 66F3QGR86W;
