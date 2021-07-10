@@ -14,8 +14,6 @@ class CellPersonaje: UITableViewCell {
     @IBOutlet var imagenHablar: ImagenHablar!
 
 
-  
-    
     var item: ProtocolItem? {
         didSet {
             if let item = item {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41350DD726998E16004D6D8C /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41350DD626998E16004D6D8C /* ExtensionView.swift */; };
 		414008F91EAFD61300DDC720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414008F81EAFD61300DDC720 /* AppDelegate.swift */; };
 		414008FE1EAFD61300DDC720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414008FC1EAFD61300DDC720 /* Main.storyboard */; };
 		414009001EAFD61300DDC720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 414008FF1EAFD61300DDC720 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		2A86873E07E982F8ABA5F914 /* Pods-MarveleduardofulgencioApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi.release.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi.release.xcconfig"; sourceTree = "<group>"; };
 		2FAEDFB21BFB2133AD3F55BA /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3ECBCF44149D8E8CB4775823 /* Pods-MarveleduardofulgencioApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi.debug.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi.debug.xcconfig"; sourceTree = "<group>"; };
+		41350DD626998E16004D6D8C /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		414008F51EAFD61300DDC720 /* MarveleduardofulgencioApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarveleduardofulgencioApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414008F81EAFD61300DDC720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		414008FD1EAFD61300DDC720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 			name = MVVMC;
 			sourceTree = "<group>";
 		};
+		41350DD526998E00004D6D8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41350DD626998E16004D6D8C /* ExtensionView.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		414008EC1EAFD61300DDC720 = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +263,7 @@
 		414009801EB6607200DDC720 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				41350DD526998E00004D6D8C /* Extensions */,
 				417E76F81ECD5C4000310B38 /* componente */,
 				414009C71EB7227D00DDC720 /* ListadoTVC.swift */,
 				418479151ECC3B2600E2A158 /* DetalleVC.swift */,
@@ -454,7 +465,6 @@
 				6085E09307FCDC21C42F2A8B /* Pods-MarveleduardofulgencioApiTests.debug.xcconfig */,
 				87BBBC80B38EF0F39454D1C7 /* Pods-MarveleduardofulgencioApiTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -725,6 +735,7 @@
 				416D030125B18725000DE331 /* PopupVC.swift in Sources */,
 				414009A81EB7196500DDC720 /* LIstadoModel.swift in Sources */,
 				4140098C1EB6636300DDC720 /* Coordinador.swift in Sources */,
+				41350DD726998E16004D6D8C /* ExtensionView.swift in Sources */,
 				417E76FC1ECD5CC200310B38 /* CellPersonaje.swift in Sources */,
 				414009A61EB7187600DDC720 /* ListadoModelProtocol.swift in Sources */,
 				414009791EB26C6800DDC720 /* ApiService.swift in Sources */,

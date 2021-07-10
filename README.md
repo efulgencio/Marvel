@@ -18,4 +18,5 @@ Evolutivo de la prueba cronológico:
 - LocalNotification
 - Implementada 
 - ArKit (Realidad Aumentada)
+- Generic (ViewBase) implementa método según el View del que proviene
 

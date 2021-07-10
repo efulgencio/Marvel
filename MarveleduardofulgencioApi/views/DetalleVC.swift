@@ -13,6 +13,7 @@ class DetalleVC: UIViewController {
     @IBOutlet var lblitem: UILabel!
     @IBOutlet var imagenView: UIImageView!
     @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet var btnBack: UIButton!
     
     var blurEffectView: UIVisualEffectView?
 
@@ -49,6 +50,8 @@ class DetalleVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let btn: ViewBase = ViewBase(view: btnBack)
+        btn.changeTitle(to: "Volver")
         saveCoreData()
         checkErrorImage()
     }
@@ -59,6 +62,8 @@ class DetalleVC: UIViewController {
         backgroundImage.image = UIImage(named: "imgpersonaje1" ) // pending default image
         if let viewModel = viewModel {
             lblitem.text = viewModel.detail?.nombre
+            let lbl = ViewBase(view: lblitem)
+            lbl.changeFont(to: UIFont.systemFont(ofSize: 16))
             imagenView.load(url: URL(string: (viewModel.detail?.imagen)! + ".jpg")!)
             backgroundImage.load(url: URL(string: (viewModel.detail?.imagen)! + ".jpg")!)
         } else {
