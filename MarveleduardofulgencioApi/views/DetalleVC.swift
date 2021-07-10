@@ -50,8 +50,8 @@ class DetalleVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let btn: ViewBase = ViewBase(view: btnBack)
-        btn.changeTitle(to: "Volver")
+        // Change title use generic with where uibutton
+        ViewBase(view: btnBack).changeTitle(to: "Volver")
         saveCoreData()
         checkErrorImage()
     }
@@ -62,8 +62,8 @@ class DetalleVC: UIViewController {
         backgroundImage.image = UIImage(named: "imgpersonaje1" ) // pending default image
         if let viewModel = viewModel {
             lblitem.text = viewModel.detail?.nombre
-            let lbl = ViewBase(view: lblitem)
-            lbl.changeFont(to: UIFont.systemFont(ofSize: 16))
+            // Change font use generic with where uilabel
+            ViewBase(view: lblitem).changeFont(to: UIFont.systemFont(ofSize: 24))
             imagenView.load(url: URL(string: (viewModel.detail?.imagen)! + ".jpg")!)
             backgroundImage.load(url: URL(string: (viewModel.detail?.imagen)! + ".jpg")!)
         } else {
