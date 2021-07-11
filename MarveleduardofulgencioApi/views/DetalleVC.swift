@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class DetalleVC: UIViewController {
 
@@ -15,6 +17,8 @@ class DetalleVC: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var btnArkit: UIButton!
+    
+    let disposeBag = DisposeBag()
     
     
     var blurEffectView: UIVisualEffectView?
@@ -56,6 +60,7 @@ class DetalleVC: UIViewController {
         ViewBase(view: btnBack).changeTitle(to: "Volver")
         saveCoreData()
         checkErrorImage()
+        setUpRx()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +87,7 @@ class DetalleVC: UIViewController {
     // MARK: - IBAction
     
     @IBAction func volve(_ sender: Any) {
-           viewModel?.done();
+    //       viewModel?.done();
     }
     
     // FIXME: - Fix
@@ -98,6 +103,16 @@ class DetalleVC: UIViewController {
     }
     
     // MARK: - Private functions
+    
+    private func setUpRx() {
+        btnBack
+            .rx.tap
+            .asObservable()
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] in
+                self!.viewModel?.done();
+            }.disposed(by: disposeBag)
+    }
     
     private func checkErrorImage() {
         let validation = Validation()
