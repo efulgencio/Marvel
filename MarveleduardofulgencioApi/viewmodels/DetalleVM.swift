@@ -10,8 +10,11 @@ import Foundation
 
 class DetalleVM: ProtocolDetalleVM
 {
+    let loadData = Box(false)
+    
     weak var viewDelegate: DetalleVMViewDelegate?
     weak var coordinadorDelegate: DetalleVMCoordinadorDelegate?
+    
     
     fileprivate(set) var detail: ProtocolItem? {
         didSet {
@@ -23,6 +26,7 @@ class DetalleVM: ProtocolDetalleVM
         didSet {
             model?.detalle({ (item) in
                 self.detail = item
+                self.loadData.value = true
             })
         }
     }

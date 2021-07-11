@@ -60,7 +60,15 @@ class DetalleVC: UIViewController {
         ViewBase(view: btnBack).changeTitle(to: "Volver")
         saveCoreData()
         checkErrorImage()
+        
+        // Uso de RxSwift
         setUpRx()
+        // Uso de listener
+        viewModel?.loadData.bind { state in
+            if state {
+                debugPrint("Se han cargado los datos del item seleccionado")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
