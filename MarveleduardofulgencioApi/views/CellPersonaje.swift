@@ -17,11 +17,15 @@ class CellPersonaje: UITableViewCell {
     var item: ProtocolItem? {
         didSet {
             if let item = item {
-                lblNombre.text = item.nombre
-                imagenHablar.imagenView.image =  UIImage(named: item.imagen)
+                DispatchQueue.main.async {
+                    self.lblNombre.text = item.nombre
+                    self.imagenHablar.imagenView.image =  UIImage(named: item.imagen)
+                }
             } else {
-                lblNombre.text = ""
-                imagenHablar.imagenView.image = nil
+                DispatchQueue.main.async {
+                    self.lblNombre.text = ""
+                    self.imagenHablar.imagenView.image = nil
+                }
             }
         }
     }

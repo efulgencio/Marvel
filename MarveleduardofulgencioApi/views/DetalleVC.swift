@@ -20,7 +20,6 @@ class DetalleVC: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    
     var blurEffectView: UIVisualEffectView?
 
     lazy var basicAnimation: CABasicAnimation = {
@@ -56,7 +55,7 @@ class DetalleVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Change title use generic with where uibutton
+        // Change title use GENERIC with where uibutton
         ViewBase(view: btnBack).changeTitle(to: "Volver")
         saveCoreData()
         checkErrorImage()

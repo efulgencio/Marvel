@@ -39,6 +39,9 @@ struct StructItem: ProtocolItem
         }
     }
     
+    
+    /// Get value using path
+    /// - Parameter character: dictionary from response
     init(character: NSDictionary) {
         self.id = character[PathJson.characterId.rawValue]! as! Int
         self.nombre = character[PathJson.characterName.rawValue]! as! String
