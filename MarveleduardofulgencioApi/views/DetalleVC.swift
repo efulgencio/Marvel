@@ -26,7 +26,7 @@ class DetalleVC: UIViewController {
         let animation =  CABasicAnimation(keyPath: "position.y")
         animation.fromValue = 0
         animation.toValue = imagenView.bounds.maxY
-        animation.duration = 1.0
+        animation.duration = 0.5
         animation.delegate = self
         return animation
     }()
@@ -78,6 +78,7 @@ class DetalleVC: UIViewController {
             lblitem.text = viewModel.detail?.nombre
             // Change font use generic with where uilabel
             ViewBase(view: lblitem).changeFont(to: UIFont.systemFont(ofSize: 24))
+            
             imagenView.load(url: URL(string: (viewModel.detail?.imagen)! + ".jpg")!)
             backgroundImage.load(url: URL(string: (viewModel.detail?.imagen)! + ".jpg")!)
         } else {
@@ -90,12 +91,6 @@ class DetalleVC: UIViewController {
         animationImgCharacter()
     }
     
-    
-    // MARK: - IBAction
-    
-    @IBAction func volve(_ sender: Any) {
-    //       viewModel?.done();
-    }
     
     // FIXME: - Fix
     
