@@ -164,10 +164,8 @@ class DetalleVC: UIViewController {
             let caracter = Character(context: context)
             caracter.name = viewModel?.detail?.nombre
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
+            // Aviso al usuario que se añadido a core data
             UNService.shared.queueRequest(title: "Favorito", subTitle: "Este personaje se ha guardado en favoritos.")
-        } else {
-            UNService.shared.queueRequest(title: "Favorito", subTitle: "Este personaje ya está en favoritos.")
         }
         
     }
