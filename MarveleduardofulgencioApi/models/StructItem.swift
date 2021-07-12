@@ -11,7 +11,7 @@ import Foundation
 struct StructItem: ProtocolItem
 {
     var id = 0
-    var nombre = ""
+    @UpperString var nombre = ""
     var imagen = ""
     var formatImg = ""
     var descripcion = ""

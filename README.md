@@ -8,6 +8,7 @@
 - LocalNotification
 - RxSwift 
 - class Box: clase que hace de listener para realizar bind
+- Property Wrapper para que los nombres de los personajes sean en mayúsculas
 - ArKit (Realidad Aumentada)
 - Generic (ViewBase) implementa método según el View del que proviene
 
