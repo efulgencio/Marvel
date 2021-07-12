@@ -28,9 +28,7 @@ class UNService: NSObject {
     func authorize() {
         let options: UNAuthorizationOptions = [.alert, .badge]
         unCenter.requestAuthorization(options: options) { (granted, error) in
-            print(error ?? "No UN auth error")
             guard granted else {
-                print("USER DENIED ACCESs")
                 return
             }
             
@@ -63,7 +61,6 @@ class UNService: NSObject {
 extension UNService: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("UN did receive response")
         
         if let action = NotificationActionID(rawValue: response.actionIdentifier) {
             NotificationCenter.default.post(name: NSNotification.Name("internalNotification.handleAction"),
@@ -74,7 +71,6 @@ extension UNService: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("UN WILL present")
         
         let options: UNNotificationPresentationOptions = [.alert]
         completionHandler(options)
