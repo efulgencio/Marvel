@@ -52,6 +52,11 @@ import AVFoundation
 
         refreshDisplay();
         disposeBag = DisposeBag()
+        
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            // Uso de callsAsFuction de una struc
+           debugPrint(MessageDebug(version: version)())
+       }
 
     }
     

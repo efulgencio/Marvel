@@ -18,3 +18,16 @@
 		    }
 		}
 
+- Método callAsFunction (callable object)
+
+struct MessageDebug {
+    let version: String
+    
+    func callAsFunction(message: String)  {
+        debugPrint(message + " \(version)")
+    }
+    
+    func callAsFunction() -> String {
+        return "Versión: \(version)"
+    }
+}
