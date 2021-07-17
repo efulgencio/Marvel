@@ -11,7 +11,7 @@
 		0E22F3CB26A2BFE900EC06E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E22F3CA26A2BFE900EC06E3 /* Assets.xcassets */; };
 		0E22F3D026A2C04A00EC06E3 /* heroes.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E22F3CF26A2C04A00EC06E3 /* heroes.scnassets */; };
 		0E22F3DE26A2C07B00EC06E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E22F3DC26A2C07B00EC06E3 /* LaunchScreen.storyboard */; };
-		0E22F41A26A2C23200EC06E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22F3BA26A2BE9100EC06E3 /* AppDelegate.swift */; };
+		0E22F43026A2C61B00EC06E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22F42F26A2C61B00EC06E3 /* AppDelegate.swift */; };
 		41350DD726998E16004D6D8C /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41350DD626998E16004D6D8C /* ExtensionView.swift */; };
 		41350DD9269A152A004D6D8C /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41350DD8269A152A004D6D8C /* ExtensionViewController.swift */; };
 		4139033E269CD48800B2F024 /* UpperWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139033D269CD48800B2F024 /* UpperWrapper.swift */; };
@@ -74,12 +74,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E22F3BA26A2BE9100EC06E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E22F3C226A2BF8500EC06E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MarveleduardofulgencioApi/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		0E22F3CA26A2BFE900EC06E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MarveleduardofulgencioApi/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		0E22F3CF26A2C04A00EC06E3 /* heroes.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = heroes.scnassets; path = MarveleduardofulgencioApi/heroes.scnassets; sourceTree = SOURCE_ROOT; };
 		0E22F3DD26A2C07B00EC06E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MarveleduardofulgencioApi/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		0E22F3F726A2C18700EC06E3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E22F42F26A2C61B00EC06E3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MarveleduardofulgencioApi/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		2A86873E07E982F8ABA5F914 /* Pods-MarveleduardofulgencioApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi.release.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi.release.xcconfig"; sourceTree = "<group>"; };
 		2FAEDFB21BFB2133AD3F55BA /* Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests/Pods-MarveleduardofulgencioApi-MarveleduardofulgencioApiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3ECBCF44149D8E8CB4775823 /* Pods-MarveleduardofulgencioApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarveleduardofulgencioApi.debug.xcconfig"; path = "Target Support Files/Pods-MarveleduardofulgencioApi/Pods-MarveleduardofulgencioApi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		0E22F3B926A2BE9100EC06E3 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				0E22F3BA26A2BE9100EC06E3 /* AppDelegate.swift */,
+				0E22F42F26A2C61B00EC06E3 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -742,7 +742,7 @@
 				414009A61EB7187600DDC720 /* ListadoModelProtocol.swift in Sources */,
 				414009791EB26C6800DDC720 /* ApiService.swift in Sources */,
 				415C0F3325ADA92E00CB4D3D /* UNService.swift in Sources */,
-				0E22F41A26A2C23200EC06E3 /* AppDelegate.swift in Sources */,
+				0E22F43026A2C61B00EC06E3 /* AppDelegate.swift in Sources */,
 				419E7EE025AB3964001B36BC /* UIImageViewExtension.swift in Sources */,
 				4184790D1ECC0A9D00E2A158 /* DetalleModel.swift in Sources */,
 				41EBDC1B269B7A30001949DC /* Box.swift in Sources */,
