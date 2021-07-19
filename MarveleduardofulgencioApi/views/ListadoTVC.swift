@@ -63,13 +63,7 @@ import AVFoundation
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
-        let utterance = AVSpeechUtterance(string: "hola")
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        utterance.rate = 0.1
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
-        
+
         
         guard let dispose = disposeBag else {
             return
