@@ -57,6 +57,8 @@ import AVFoundation
             // Uso de callsAsFuction de una struc
            debugPrint(MessageDebug(version: version)())
        }
+        
+        tableView.accessibilityIdentifier = "table_listado"
 
     }
     
