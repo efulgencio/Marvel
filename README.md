@@ -6,7 +6,7 @@
 - Animación
 - Catch Error
 - LocalNotification
-- RxSwift 
+- RxSwift
 - class Box: clase que hace de listener para realizar bind
 - Property Wrapper para que los nombres de los personajes sean en mayúsculas
 - ArKit (Realidad Aumentada)
@@ -22,12 +22,14 @@
 
 struct MessageDebug {
     let version: String
-    
+
     func callAsFunction(message: String)  {
         debugPrint(message + " \(version)")
     }
-    
+
     func callAsFunction() -> String {
         return "Versión: \(version)"
     }
 }
+
+- Testing (inicial, pendiente UI)
