@@ -32,4 +32,4 @@ struct MessageDebug {
     }
 }
 
-- Testing (inicial, pendiente UI)
+- Testing
